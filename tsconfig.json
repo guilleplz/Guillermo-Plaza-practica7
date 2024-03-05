@@ -1,4 +1,9 @@
 {
+  "ignore": [
+    "node_modules",
+    "dist",
+    "test"
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
