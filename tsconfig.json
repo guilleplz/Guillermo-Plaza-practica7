@@ -1,8 +1,9 @@
 {
-  "ignore": [
-    "node_modules",
-    "dist",
-    "test"
+  "exclude": [
+    "./node_modules",
+    "./dist",
+    "./test",
+    ".nyc_output"
   ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
