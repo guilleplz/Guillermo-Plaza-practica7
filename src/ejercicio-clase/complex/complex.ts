@@ -35,12 +35,8 @@ export class Complex {
      * @returns Número complejo resultante
      */
     multiply(other: Complex): Complex {
-        const realPart1 = this.real.multiply(other.real);
-        const realPart2 = this.imaginary.multiply(other.imaginary);
-        const realPart = realPart1.subtract(realPart2);
-        const imaginaryPart1 = this.real.multiply(other.imaginary);
-        const imaginaryPart2 = this.imaginary.multiply(other.real);
-        const imaginaryPart = imaginaryPart1.add(imaginaryPart2);
+        const realPart = this.real.multiply(other.real).subtract(this.imaginary.multiply(other.imaginary));
+        const imaginaryPart = this.real.multiply(other.imaginary).add(this.imaginary.multiply(other.real));
         return new Complex(realPart, imaginaryPart);
     }
 
@@ -50,15 +46,9 @@ export class Complex {
      * @returns Número complejo resultante
      */
     divide(other: Complex): Complex {
-        const denominator1 = other.real.multiply(other.real);
-        const denominator2 = other.imaginary.multiply(other.imaginary);
-        const denominator = denominator1.add(denominator2);
-        const realPart1 = this.real.multiply(other.real);
-        const realPart2 = this.imaginary.multiply(other.imaginary);
-        const realPart = (realPart1.add(realPart2)).divide(denominator);
-        const imaginaryPart1 = this.imaginary.multiply(other.real);
-        const imaginaryPart2 = this.real.multiply(other.imaginary);
-        const imaginaryPart = (imaginaryPart1.subtract(imaginaryPart2)).divide(denominator);
+        const denominator = other.real.multiply(other.real).add(other.imaginary.multiply(other.imaginary));
+        const realPart = (this.real.multiply(other.real).add(this.imaginary.multiply(other.imaginary))).divide(denominator);
+        const imaginaryPart = (this.imaginary.multiply(other.real).subtract(this.real.multiply(other.imaginary))).divide(denominator);
         return new Complex(realPart, imaginaryPart);
     }
 
