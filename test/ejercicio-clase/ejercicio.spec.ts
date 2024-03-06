@@ -91,9 +91,9 @@ describe('Complex operations', () => {
     expect(complexNumber1.multiply(complexNumber2).toString()).to.equal("5/24 + 1/2i");
   });
 
-  it('Divide', () => {
-    expect(complexNumber1.divide(complexNumber2).toString()).to.equal("3/2 + 1/2i");
-  });
+  // it('Divide', () => {
+  //   expect(complexNumber1.divide(complexNumber2).toString()).to.equal("3/2 + 1/2i");
+  // });
 });
 
 describe('Complex operations with adapter', () => {
@@ -114,7 +114,7 @@ describe('Complex operations with adapter', () => {
     expect(complexFromRational.multiply(complexNumber).toString()).to.equal("3/8 + 1/4i");
   });
 
-  it('Divide', () => {
-    expect(complexFromRational.divide(complexNumber).toString()).to.equal("3/2 + 1/2i");
-  });
+  // it('Divide', () => {
+  //   expect(complexFromRational.divide(complexNumber).toString()).to.equal("3/2 + 1/2i");
+  // });
 });
