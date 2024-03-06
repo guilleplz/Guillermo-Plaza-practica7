@@ -11,6 +11,7 @@ export class RationalComplexAdapter {
    */
   constructor(public rational: Rational) {}
 
+  
   /**
    * Convierte el número racional a un número complejo.
    */
